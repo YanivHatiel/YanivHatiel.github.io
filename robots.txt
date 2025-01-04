@@ -1,1 +1,1 @@
-User-agent: * Disallow: Sitemap: https://YanivHatiel.github.io/al-folio/sitemap.xml
+User-agent: * Disallow: Sitemap: https://YanivHatiel.github.io/sitemap.xml
