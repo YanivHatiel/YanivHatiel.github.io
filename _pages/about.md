@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Founder of 01Architecture | Computational Design Specialist | M.Arch.
+subtitle: Architectural Designer | Computational Design Specialist | M.Arch.
 
 profile:
   align: right
@@ -18,7 +18,12 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-Founder of 01Architecture, based in London, Yaniv specializes in parametric design, AI, BIM technologies, and digital craft, delivering adaptive, data-driven architectural solutions. Known for integrating cutting-edge algorithms into iconic urban projects, he has led global collaborations with firms like Zaha Hadid Architects, KPF, and PLP. Versatile in scale and scope, Yaniv has worked on urban planning, building design, and both public and private sector projects. His Master's thesis, "Kinetic Architecture," earned the Nikser Prize, and he has received multiple academic honors. Yaniv’s portfolio includes LEED Platinum-certified projects and innovative facade designs, showcasing a commitment to sustainability and digital innovation.
+Founder of 01Architecture, based in London, Yaniv specializes in parametric design, BIM technologies, and digital craft,delivering adaptive, data-driven architectural solutions. 
+Known for integrating cutting-edge algorithms into iconic urban projects, 
+he has led global collaborations with firms like Zaha Hadid Architects, KPF, and PLP. Versatile in scale and scope, 
+Yaniv has worked on urban planning, building design, and both public and private sector projects. 
+His Master's thesis, "Kinetic Architecture," earned the Nikser Prize, and he has received multiple academic honors. 
+Yaniv’s portfolio includes LEED Platinum-certified projects and innovative facade designs, showcasing a commitment to sustainability and digital innovation.
 
 <!-- 
 You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
