@@ -1,0 +1,63 @@
+{{ define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+</header>
+
+{{- $items := site.Data.awards.awards.items }}
+{{- if not $items }}
+  <p>No highlights found.</p>
+{{- else }}
+
+  {{/* 1. Collect all types in order */}}
+  {{- $types := slice }}
+  {{- range $items }}
+    {{- if not (in $types .type) }}
+      {{- $types = $types | append .type }}
+    {{- end }}
+  {{- end }}
+
+  {{/* 2. For each type, sort and group by year */}}
+  {{- range $types }}
+    {{- $type := . }}
+    <section class="archive-type-group">
+      <h2 class="archive-type-header">{{ $type }}</h2>
+      {{- $typeItems := where $items "type" $type }}
+      {{- $sorted := sort $typeItems "date" "desc" }}
+      {{- $currentYear := "" }}
+
+      {{- range $i := $sorted }}
+        {{- $year := (time $i.date).Year }}
+        {{- if ne $year $currentYear }}
+          {{- if ne $currentYear "" }}</div>{{ end }}
+          <div class="archive-year">
+            <h3 class="archive-year-header" id="{{ $type | urlize }}-{{ $year }}">
+              <a class="archive-header-link" href="#{{ $type | urlize }}-{{ $year }}">{{ $year }}</a>
+            </h3>
+            <div class="archive-posts">
+          {{- $currentYear = $year }}
+        {{- end }}
+
+        <div class="archive-entry">
+          <div class="archive-entry-header">
+            <h4 class="archive-entry-title">
+              <a href="{{ $i.link }}" target="_blank" rel="noopener">{{ $i.title }}</a>
+            </h4>
+          </div>
+          {{- if $i.description }}
+            <div class="archive-entry-description">{{ $i.description }}</div>
+          {{- end }}
+        </div>
+
+      {{- end }}
+      </div> <!-- closes last .archive-posts -->
+    </section>
+  {{- end }}
+
+{{ end }}
+{{ end }}

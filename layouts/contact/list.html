@@ -1,0 +1,14 @@
+{{ define "main" }}
+
+<div class="contact-container">
+  {{- if not .Params.hideTitle }}
+    <h1 class="contact-title">{{ .Title }}</h1>
+  {{- end }}
+
+
+  <div class="contact-details">
+    {{ .Content }}
+  </div>
+</div>
+
+{{ end }}

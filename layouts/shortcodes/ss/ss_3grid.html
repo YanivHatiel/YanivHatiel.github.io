@@ -1,0 +1,341 @@
+<style>
+
+
+
+.meta,
+.meta-left,
+.meta-link {
+  text-align: left;
+}
+.meta-left p {
+  line-height: 1.3;
+  font-size: 0.95rem;
+}
+
+.meta-by {
+
+  color: #999; 
+ }
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+  
+  .content-wrapper {
+  max-width: 720px; /* or 640px depending on PaperMod content width */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid-thumb {
+  position: relative;
+  aspect-ratio: 4 / 8;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  background: red;
+  display: block;
+}
+
+
+
+
+.thumb-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+.thumb-image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: blue; /* Debugging color, optional */
+}
+
+ 
+ <!--  OLD_SS
+  .thumb-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark bg */
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}-->
+
+/* Minimal overlay text */
+.thumb-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0;
+  text-align: center;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.grid-thumb:hover .thumb-title {
+  opacity: 1;
+}
+
+.grid-thumb:hover img {
+  opacity: 0.6;
+  filter: blur(3px); /* Optional: adds subtle blur */
+}
+
+
+
+.preview {
+  display: none;
+  grid-column: 1 / -1;
+  position: relative;
+  padding: 0.1rem 0.1rem;    /* ✅ adds left/right margin-like feel */
+  //border-radius: 20px;
+  //border: 1px solid #ccc;
+  //box-sizing: border-box;
+  //margin-bottom: 1rem;
+  width: 100%;
+    opacity: 0;
+      transition:
+    max-height 0.4s ease,
+    opacity 0.2s ease 0.1s;
+
+}
+
+.preview .meta {
+  text-align: left;
+  display: flex;
+  margin-top: auto;
+  flex-direction: column;
+  justify-content: center;
+  //word-wrap: break-word;
+  //overflow-wrap: break-word;
+  max-width: 100%; /* ✅ ensures it doesn't overflow */
+  box-sizing: border-box;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  color: var(--content, #333);
+  text-align: center;
+
+}
+
+.preview.open {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  opacity: 1;
+  max-height: 2000px;
+}
+
+
+}
+
+  @media (min-width: 768px) {
+    .preview.open {
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+  }
+
+.preview .gallery {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+  
+.preview h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1.3rem;
+}
+
+
+.gallery {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;           /* Fixed height for all previews */
+  overflow: hidden;        /* Prevent overflow from tall images */
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+  .gallery-image.hidden {
+    display: none;
+  }
+
+  .gallery-controls {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 1rem;
+  }
+
+  .gallery-controls button {
+    background: transparent;
+    color: black;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .close-preview {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #888;
+    z-index: 10;
+  }
+
+
+  // X at the corner - close preview
+  .close-preview:hover {
+    color: #000;
+  }
+  
+  
+  /* Light mode */
+body:not(.dark) .thumb-title {
+  color: #000;
+}
+
+/* Dark mode */
+body.dark .thumb-title {
+  color: #fff;
+}
+
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const thumbs = document.querySelectorAll(".grid-thumb");
+
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        const target = thumb.dataset.preview;
+
+        document.querySelectorAll(".preview").forEach((preview) => {
+          preview.classList.toggle("open", preview.dataset.preview === target);
+        });
+
+        // Scroll to preview after expansion
+        const previewElement = document.querySelector(`.preview[data-preview="${target}"]`);
+        if (previewElement) {
+          previewElement.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+    });
+
+    document.querySelectorAll(".close-preview").forEach(button => {
+      button.addEventListener("click", () => {
+        button.closest(".preview").classList.remove("open");
+      });
+    });
+
+    document.querySelectorAll(".gallery").forEach((gallery) => {
+      const images = gallery.querySelectorAll(".gallery-image");
+      let current = 0;
+
+      const show = (index) => {
+        images.forEach((img, i) => {
+          img.classList.toggle("hidden", i !== index);
+        });
+      };
+
+      gallery.querySelector(".prev").addEventListener("click", () => {
+        current = (current - 1 + images.length) % images.length;
+        show(current);
+      });
+
+      gallery.querySelector(".next").addEventListener("click", () => {
+        current = (current + 1) % images.length;
+        show(current);
+      });
+
+      show(current);
+    });
+  });
+</script>
+
+<!-- Thumbnails -->
+<div class="content-wrapper">
+  <div class="grid-container">
+    {{ range $index, $item := .Site.Data.portfolio.items }}
+      <div class="grid-thumb" data-preview="{{ $index }}">
+        
+        <div class="thumb-image">
+
+        <img src="{{ $item.thumb }}" alt="{{ $item.alt }}">
+       
+        <div class="thumb-title">{{ $item.title }}</div>
+      </div>
+      </div>
+
+      <div class="preview" data-preview="{{ $index }}">
+        <button class="close-preview" aria-label="Close preview">&times;</button>
+
+        <div class="gallery" data-index="{{ $index }}">
+          {{ range $i, $img := $item.images }}
+            <img src="{{ $img }}" alt="{{ $item.alt }}" class="gallery-image{{ if ne $i 0 }} hidden{{ end }}">
+          {{ end }}
+          <div class="gallery-controls">
+            <button class="prev">&larr;</button>
+            <button class="next">&rarr;</button>
+          </div>
+        </div>
+
+<div class="meta">
+  <div class="meta-left">
+    <h3>{{ $item.title }}</h3>
+    <p class="meta-by">By {{ $item.by }}</p>
+    <p class="meta-author"> {{ $item.description }}</p>
+    
+  </div>
+
+
+  {{ if $item.link }}
+    <div class="meta-link">
+      <a href="{{ $item.link }}" target="_blank">Visit Website</a>
+    </div>
+  {{ end }}
+</div>
+
+</div>
+{{ end }}
+
