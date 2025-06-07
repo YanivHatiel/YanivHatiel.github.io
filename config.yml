@@ -19,6 +19,12 @@ disableKinds:
 theme: [PaperMod]
 publishDir: "docs"
 
+
+caches:
+  images:
+    dir: ":cacheDir/images"
+
+
 params:
   author: "Yaniv Hatiel"
   
@@ -29,12 +35,6 @@ params:
     fingerprint: false
     disableHLJS: true
     
-
-caches:
-  images:
-  dir: ":cacheDir/images"
-
-
     ShowShareButtons: true
     ShowReadingTime: true
     ShowCodeCopyButtons: true
