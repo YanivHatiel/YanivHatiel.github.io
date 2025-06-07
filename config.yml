@@ -29,8 +29,11 @@ params:
     fingerprint: false
     disableHLJS: true
     
-    env: production
-    
+
+caches:
+  images:
+  dir: ":cacheDir/images"
+
 
     ShowShareButtons: true
     ShowReadingTime: true
