@@ -31,6 +31,27 @@ params:
     
     env: production
     
+
+    ShowShareButtons: true
+    ShowReadingTime: true
+    ShowCodeCopyButtons: true
+
+    defaultTheme: auto
+    # disableThemeToggle: true
+    ShowShareButtons: true
+    ShowReadingTime: true
+    # disableSpecial1stPost: true
+    displayFullLangName: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    ShowRssButtonInSectionTermList: true
+    ShowAllPagesInArchive: true
+    ShowPageNums: true
+    ShowToc: true
+    # comments: false
+    images: ["images/papermod-cover.png"]
+      
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
@@ -88,27 +109,7 @@ outputs:
     - RSS
     - JSON
 
-params:
-  env: production
-  ShowShareButtons: true
-  ShowReadingTime: true
-  ShowCodeCopyButtons: true
 
-  defaultTheme: auto
-  # disableThemeToggle: true
-  ShowShareButtons: true
-  ShowReadingTime: true
-  # disableSpecial1stPost: true
-  displayFullLangName: true
-  ShowPostNavLinks: true
-  ShowBreadCrumbs: true
-  ShowCodeCopyButtons: true
-  ShowRssButtonInSectionTermList: true
-  ShowAllPagesInArchive: true
-  ShowPageNums: true
-  ShowToc: true
-  # comments: false
-  images: ["images/papermod-cover.png"]
 
   profileMode:
     enabled: false
