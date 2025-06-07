@@ -21,11 +21,14 @@ publishDir: "docs"
 
 params:
   author: "Yaniv Hatiel"
+  
   assets:
     customCSS:
       - css/custom.css       # note the space after `-`
-    disableFingerprinting: true
+    
+    fingerprint: false
     disableHLJS: true
+    
     env: production
     
 enableInlineShortcodes: true
