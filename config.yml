@@ -5,12 +5,16 @@ baseURL: "https://YanivHatiel.github.io/"
 title: Yaniv Hatiel
 copyright: "© [Yaniv Hatiel](https://yaniv.hatiel.com)"
 
+
+
 disableKinds:
   - taxonomy
   - taxonomyTerm
 
 
 theme: [PaperMod]
+publishDir: "docs"
+
 params:
   author: "Yaniv Hatiel"
   assets:
