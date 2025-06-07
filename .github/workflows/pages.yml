@@ -1,0 +1,4 @@
+cd C:\YH\YanivHatiel_Web\YanivHatiel_Web
+git add .github/workflows/pages.yml
+git commit -m "Add/update GitHub Actions workflow"
+git push origin main
