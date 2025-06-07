@@ -23,7 +23,8 @@ params:
   author: "Yaniv Hatiel"
   assets:
     - css/custom.css
-    fingerprint: false
+    disableFingerprinting: true
+    disableHLJS: true        # (keep this if you still want to disable highlight.js inline CSS)
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
