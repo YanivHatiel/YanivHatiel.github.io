@@ -22,10 +22,12 @@ publishDir: "docs"
 params:
   author: "Yaniv Hatiel"
   assets:
-    - css/custom.css
+    customCSS:
+      - css/custom.css       # note the space after `-`
     disableFingerprinting: true
-    disableHLJS: true        # (keep this if you still want to disable highlight.js inline CSS)
-
+    disableHLJS: true
+    env: production
+    
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
@@ -140,8 +142,7 @@ params:
   #     google:
   #         SiteVerificationTag: "XYZabc"
 
-  assets:
-    disableHLJS: true
+
 
   #     favicon: "<link / abs url>"
   #     favicon16x16: "<link / abs url>"
