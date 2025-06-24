@@ -20,10 +20,6 @@
 
 .logo {
     flex-wrap: inherit;
-      margin: 0;                  /* Remove centering */
-  padding-left: var(--gap);  /* Align with grid/gutter */
-  display: flex;
-  align-items: center;
 
 }
 

@@ -18,35 +18,34 @@
  }
 
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--gap);
-  column-gap: 1.2rem;
-  box-sizing: border-box;
-  row-gap: 0rem;
-}
-  
-.main {
-  max-width: 100% !important;
-  padding: 0 1rem;
-  margin: 0 auto;
-}
-  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    row-gap: 0rem;   /* Only vertical spacing */
+    column-gap: 0.5rem; /* Only horizontal spacing */
 
-.content-wrapper {
+    align-items: stretch;
+
+  }
+  
+  
+  .content-wrapper {
   width: 100%;
-  max-width: none; /* remove central limit */
-  padding-left: 1rem;
-  padding-right: 1rem;
+  max-width: none;
+  padding: 0 2rem; /* Adjust to match your menu padding */
+  margin: 0;       /* Remove centering */
   box-sizing: border-box;
+  
+  /*
+  max-width: 720px; /* or 640px depending on PaperMod content width */
+  margin: 0 auto;
+  padding: 0 1rem;*/
 }
-
-
 
 .grid-thumb {
 
- 
+  border-radius: 0px;
+  
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -58,8 +57,6 @@
   height: 100%;
   
   filter: saturate(80%);
-  
-  
   }
 
 
@@ -70,17 +67,31 @@
   height: 100%;
   object-fit: cover;
   display: block;
-  border-radius: 0 !important;
-
 }
 
 .thumb-image {
   flex: 1;
   overflow: hidden;
+  /*border-radius: 12px;*/
 }
 
  
-
+ <!--  OLD_SS
+  .thumb-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent dark bg */
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}-->
 
 /* Minimal overlay text */
 .thumb-title {
@@ -102,7 +113,6 @@
 
 .grid-thumb:hover .thumb-title {
   opacity: 1;
-
 }
 
 .grid-thumb:hover img {
@@ -117,7 +127,10 @@
   grid-column: 1 / -1;
   position: relative;
   padding: 0.1rem 0.1rem;    /* ✅ adds left/right margin-like feel */
-
+  //border-radius: 20px;
+  //border: 1px solid #ccc;
+  //box-sizing: border-box;
+  //margin-bottom: 1rem;
   width: 100%;
     opacity: 0;
       transition:
@@ -132,7 +145,8 @@
   margin-top: auto;
   flex-direction: column;
   justify-content: center;
-
+  //word-wrap: break-word;
+  //overflow-wrap: break-word;
   max-width: 100%; /* ✅ ensures it doesn't overflow */
   box-sizing: border-box;
   font-size: 0.8rem;
@@ -212,6 +226,7 @@
     padding: 0.5rem 1rem;
     font-size: 1.6rem;
     cursor: pointer;
+    //border-radius: 4px;
   }
 
   .close-preview {
@@ -227,6 +242,7 @@
   }
 
 
+  // X at the corner - close preview
   .close-preview:hover {
     color: #000;
   }

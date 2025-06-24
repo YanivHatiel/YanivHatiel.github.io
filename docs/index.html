@@ -11,7 +11,7 @@
 <meta name="description" content="">
 <meta name="author" content="Yaniv Hatiel">
 <link rel="canonical" href="https://YanivHatiel.github.io/">
-<link crossorigin="anonymous" href="./assets/css/stylesheet.d65c66dab2b1c89d3bd8be20ffe6b0f5909be2bfbdfdf62afca844de79e17cd7.css" integrity="sha256-1lxm2rKxyJ072L4g/&#43;aw9ZCb4r&#43;9/fYq/KhE3nnhfNc=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="./assets/css/stylesheet.f99b6defe315c30c5e9f1be5279c08449da4db41f5c5728e6bf0ac72e8203b94.css" integrity="sha256-&#43;Ztt7&#43;MVwwxenxvlJ5wIRJ2k20H1xXKOa/CscuggO5Q=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://YanivHatiel.github.io/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://YanivHatiel.github.io/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://YanivHatiel.github.io/favicon-32x32.png">
@@ -96,6 +96,7 @@
 </script>
 
 <header class="header">
+  <div class="content-wrapper">
     <nav class="nav">
         <div class="logo">
             <a href="https://YanivHatiel.github.io/" accesskey="h" title="Yaniv Hatiel (Alt + H)">Yaniv Hatiel</a>
@@ -182,6 +183,7 @@
             
             
     </nav>
+  </div> 
 </header>
 <main class="main"> 
 <div class="post-content"><style>
@@ -204,37 +206,48 @@
  }
 
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    row-gap: 0rem;    
-    column-gap: 1rem;  
-
-    align-items: stretch;
-
-  }
-  
-  .content-wrapper {
-  max-width: 720px;  
-  margin: 0 auto;
-  padding: 0 1rem;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap);
+  column-gap: 1.2rem;
+  box-sizing: border-box;
+  row-gap: 0rem;
 }
+  
+.main {
+  max-width: 100% !important;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+  
+
+.content-wrapper {
+  width: 100%;
+  max-width: none;  
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+
 
 .grid-thumb {
 
-  border-radius: 4px;
-  
+ 
   display: flex;
   flex-direction: column;
   width: 100%;
   
   position: relative;
-  aspect-ratio: 6 / 4;
+  aspect-ratio: 8 / 5;
   overflow: hidden;
   cursor: pointer;
   height: 100%;
   
   filter: saturate(80%);
+  
+  
   }
 
 
@@ -245,31 +258,17 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 0 !important;
+
 }
 
 .thumb-image {
   flex: 1;
   overflow: hidden;
-  
 }
 
  
- <!--  OLD_SS
-  .thumb-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.6);  
-  color: #fff;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 0.5rem;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}-->
+
 
  
 .thumb-title {
@@ -291,6 +290,7 @@
 
 .grid-thumb:hover .thumb-title {
   opacity: 1;
+
 }
 
 .grid-thumb:hover img {
@@ -305,10 +305,7 @@
   grid-column: 1 / -1;
   position: relative;
   padding: 0.1rem 0.1rem;     
-  
-  
-  
-  
+
   width: 100%;
     opacity: 0;
       transition:
@@ -323,8 +320,7 @@
   margin-top: auto;
   flex-direction: column;
   justify-content: center;
-  
-  
+
   max-width: 100%;  
   box-sizing: border-box;
   font-size: 0.8rem;
@@ -404,7 +400,6 @@
     padding: 0.5rem 1rem;
     font-size: 1.6rem;
     cursor: pointer;
-    
   }
 
   .close-preview {
@@ -420,7 +415,6 @@
   }
 
 
-  
   .close-preview:hover {
     color: #000;
   }
