@@ -87,7 +87,7 @@
   images:
   - /images/projects/Ice Rink/Membran_Upscalex4_00034_edit-cover.jpg
 - title: Oriente Green Campus
-  by: KPF , more info on <a href="https://orientelisbon.com/en/#" target="_blank">Oriente
+  by: KPF , more info on <a href="https://orientelisbon.com" target="_blank">Oriente
     Lisbon</a>
   description: |-
     Oriente Green Campus is a transformative reuse project in Lisbon that reimagines an existing structure as a sustainable, high-performance office and tech hub. Strategically located near key research institutions, the development is a landmark addition to the city’s skyline and has achieved LEED Platinum certification for its environmental performance.
@@ -113,19 +113,6 @@
   preview: https://static01.nyt.com/images/2015/10/25/t-magazine/25tmag-11arena_harod-t_CA0/25tmag-11arena_harod-t_CA0-articleLarge.jpg?quality=75&auto=webp&disable=upscale
   images:
   - https://static01.nyt.com/images/2015/10/25/t-magazine/25tmag-11arena_harod-t_CA0/25tmag-11arena_harod-t_CA0-articleLarge.jpg?quality=75&auto=webp&disable=upscale
-- title: 2D to BIM
-  by: Yaniv Hatiel | 01Architecture©
-  description: "Background\nThe script has been developed to support the team in the\
-    \ initial design stage. The client provided a set of 2D CAD plans and an Excel\
-    \ with attributes for 30 buildings. We aim to visualize the different data and\
-    \ avoid the remodelling process in Revit. \nThe script can generate a Revit model\
-    \ following KPF standards based on 2D plans. The Revit model includes Levels,\
-    \ floors, rooms, areas and attributes."
-  tag: ''
-  thumb: /images/projects/2D to BIM/CAD-BIM-Automate-Script-Rhino-Inside-Revit-cover-thumb.jpg
-  preview: /images/projects/2D to BIM/CAD-BIM-Automate-Script-Rhino-Inside-Revit-cover-preview.jpg
-  images:
-  - /images/projects/2D to BIM/CAD-BIM-Automate-Script-Rhino-Inside-Revit-cover.png
 - title: Cliffside Campus
   by: Yaniv Hatiel ,Amin Yassin, Jonathan Zisser , Yoel Goldstein
   description: |-

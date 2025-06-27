@@ -1,0 +1,23 @@
+- title: Cricket, Plug-in for Grasshopper
+  by: Yaniv Hatiel | 01Architecture©, Render by Amit Sadik
+  summary: |-
+    Cricket is a research-based Grasshopper plug-in developed to enhance acoustic performance through a dynamic, panelized wall system. The project investigates how geometry-driven design can be used to adaptively regulate reverberation, allowing a single architectural space to accommodate diverse acoustic requirements—such as low echo for speech-based programs and higher resonance for musical performances.<p>
+
+    The methodology is rooted in computational abstraction: sound waves are modeled as vectors, and echo intensity is derived from variations in their path lengths. A simulated grid represents auditory perception, with each cell expressing resonance values across the space. A generative algorithm then modifies panel geometry in response to acoustic targets, dynamically tuning surface angles to control sound reflection and dispersion. Cricket enables spatial adaptability without mechanical systems, offering a passive, geometry-driven solution for acoustic flexibility in performance and learning environments.
+  thumb: ''
+- title: Responsive System For Crowded Cities
+  by: Yaniv Hatiel | 01Architecture©, Render by Amit Sadik
+  summary: |-
+    This project investigates how kinetic architecture can redefine public space in dense urban environments. Developed through a modular pantograph system, the design introduces flexible structures that shift in response to changing demands—expanding or contracting to support diverse activities throughout the day. These dynamic transformations allow cities to reclaim underused land and adapt it to the evolving needs of their communities. <p>
+
+    Enabled by digital infrastructure and real-time data, the system translates urban conditions into spatial decisions. Each module balances efficiency and expression, offering a spectrum of configurations that support both social interaction and individual use. The result is a spatial framework that embraces the complexity of future cities—fluid, inclusive, and deeply responsive.
+  thumb: /images/research/responsive-system-for-crowded-cities/thumb.jpg
+- title: 2D to BIM
+  by: Yaniv Hatiel | 01Architecture©
+  summary: "Background\nThe script has been developed to support the team in the initial\
+    \ design stage. The client provided a set of 2D CAD plans and an Excel with attributes\
+    \ for 30 buildings. We aim to visualize the different data and avoid the remodelling\
+    \ process in Revit. \nThe script can generate a Revit model following KPF standards\
+    \ based on 2D plans. The Revit model includes Levels, floors, rooms, areas and\
+    \ attributes."
+  thumb: /images/research/2d-to-bim/thumb.jpg

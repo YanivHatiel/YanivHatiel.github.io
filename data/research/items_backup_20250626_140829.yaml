@@ -1,0 +1,36 @@
+- title: Cricket, Plug-in for Grasshopper
+  by: Yaniv Hatiel | 01Architecture©, Render by Amit Sadik
+  summary: "Cricket, Plug-in for Grasshopper\nImproved acoustic performance by dynamic\
+    \ panelized wall systems\n01Architecture\n\nTools: Rhino. Grasshopper. Python\n\
+    \nBackground\nDifferent types of activity require different acoustic performances.Lectures,\
+    \ for instance, need low echo for speech intelligibility. Musical performances,\
+    \ on the other hand, require reverberation. What if we\ncould design one space\
+    \ that allows two types of activities and adjust the acoustic performance as\n\
+    needed? A dynamic, panelised wall system that changes the reflection angle of\
+    \ the sound waves\nregulates the resonant effect according to the activity. For\
+    \ this reason, Cricket, a plug-in for Grasshopper that improves the acoustic performance\
+    \ through dynamic panelised wall systems, was developed.\nProblem-solving strategy:(Abstraction)\n\
+    1. Treating a sound wave as a collection of vectors \n\n2. Defining the echo by\
+    \ the\nlength difference of the vectors. If the length difference between the\
+    \ vectors is small, the echo is weak.\nIf the length difference is big, the echo\
+    \ is strong. \n\n3. Using an analysis grid to demonstrate the human\nears. Each\
+    \ cell consists of a value that indicates the resonance. \n\n4. Applying a generative\
+    \ algorithm that\nchanges the geometry of the panels to achieve low/ high resonance\
+    \ according to the activity."
+  thumb: ''
+- title: Responsive System For Crowded Cities
+  by: Yaniv Hatiel | 01Architecture©, Render by Amit Sadik
+  summary: |-
+    This project investigates how kinetic architecture can redefine public space in dense urban environments. Developed through a modular pantograph system, the design introduces flexible structures that shift in response to changing demands—expanding or contracting to support diverse activities throughout the day. These dynamic transformations allow cities to reclaim underused land and adapt it to the evolving needs of their communities.
+    <p>
+    Enabled by digital infrastructure and real-time data, the system translates urban conditions into spatial decisions. Each module balances efficiency and expression, offering a spectrum of configurations that support both social interaction and individual use. The result is a spatial framework that embraces the complexity of future cities—fluid, inclusive, and deeply responsive.
+  thumb: /images/research/responsive-system-for-crowded-cities/thumb.jpg
+- title: 2D to BIM
+  by: Yaniv Hatiel | 01Architecture©
+  summary: "Background\nThe script has been developed to support the team in the initial\
+    \ design stage. The client provided a set of 2D CAD plans and an Excel with attributes\
+    \ for 30 buildings. We aim to visualize the different data and avoid the remodelling\
+    \ process in Revit. \nThe script can generate a Revit model following KPF standards\
+    \ based on 2D plans. The Revit model includes Levels, floors, rooms, areas and\
+    \ attributes."
+  thumb: /images/research/2d-to-bim/thumb.jpg

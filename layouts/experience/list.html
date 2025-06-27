@@ -44,10 +44,14 @@
         {{- end }}
 
         <div class="archive-entry">
-          <div class="archive-entry-header">
-            <h4 class="archive-entry-title">
-              <a href="{{ $i.link }}" target="_blank" rel="noopener">{{ $i.title }}</a>
-            </h4>
+          <div class="archive-entry-header"><h4 class="archive-entry-title">
+  {{- if $i.link }}
+    <a href="{{ $i.link }}" target="_blank" rel="noopener">{{ $i.title }}</a>
+  {{- else }}
+    {{ $i.title }}
+  {{- end }}
+</h4>
+
           </div>
           {{- if $i.description }}
             <div class="archive-entry-description">{{ $i.description }}</div>
