@@ -46,11 +46,7 @@
         <div class="archive-entry">
           <div class="archive-entry-header">
             <h4 class="archive-entry-title">
-              {{- if and (isset $i "link") (ne $i.link "") }}
-                <a href="{{ $i.link }}" target="_blank" rel="noopener">{{ $i.title }}</a>
-              {{- else }}
-                {{ $i.title }}
-              {{- end }}
+              <a href="{{ $i.link }}" target="_blank" rel="noopener">{{ $i.title }}</a>
             </h4>
           </div>
           {{- if $i.description }}

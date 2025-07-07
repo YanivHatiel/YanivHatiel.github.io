@@ -1,0 +1,134 @@
+{{ define "main" }}
+
+<style>
+.content-wrapper {
+  width: 100%;
+  max-width: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  box-sizing: border-box;
+}
+
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap, 1.5rem);
+  column-gap: 1.2rem;
+  row-gap: 2rem;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 0;
+  box-sizing: border-box;
+  max-width: none;
+}
+
+.research-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg, #fff);
+  border-radius: 6px;
+  border: 1px solid var(--border, #eee);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+  box-sizing: border-box;
+}
+
+.research-card:hover {
+  transform: translateY(-2px);
+}
+
+.research-thumb {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.research-meta {
+  padding: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.research-meta h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.3rem;
+}
+
+.research-meta .meta-by {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+.research-summary .summary-rest {
+  display: none;
+}
+
+.research-card.open .summary-rest {
+  display: inline;
+}
+
+.read-more {
+  font-size: 0.85rem;
+  color: var(--primary, #007acc);
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 0.4rem;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".read-more").forEach(toggle => {
+    toggle.addEventListener("click", e => {
+      e.preventDefault();
+      const card = toggle.closest(".research-card");
+      card.classList.toggle("open");
+      toggle.textContent = card.classList.contains("open") ? "Read less" : "Read more";
+    });
+  });
+});
+</script>
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+    <div class="post-description">{{ .Description }}</div>
+  {{- end }}
+</header>
+
+<div class="content-wrapper">
+  <div class="research-grid">
+    {{ range site.Data.research.items }}
+      <div class="research-card">
+        <img src="{{ .thumb }}" alt="{{ .title }}" class="research-thumb">
+        <div class="research-meta">
+          <h3>{{ .title }}</h3>
+          {{ with .by }}<p class="meta-by">{{ . }}</p>{{ end }}
+          {{ with .summary }}
+            {{ $sentences := split . "." }}
+            {{ $first := index $sentences 0 | printf "%s." }}
+            {{ $restList := slice }}
+            {{ range $i, $s := $sentences }}
+              {{ if gt $i 0 }}
+                {{ $restList = $restList | append (print $s ".") }}
+              {{ end }}
+            {{ end }}
+            {{ $rest := delimit $restList " " }}
+            <p class="research-summary">
+              <span class="summary-first">{{ $first }}</span>
+              {{ if gt (len $rest) 0 }}
+                <span class="summary-rest">{{ $rest }}</span>
+                <a href="#" class="read-more">Read more</a>
+              {{ end }}
+            </p>
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+{{ end }}

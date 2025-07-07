@@ -1,35 +1,43 @@
   items:
 
-    # TEACHING
+    # ACADEMIC TEACHING EXPERIENCE
+
     - title: "Module Co-Leader - BioClimate Design 2nd/3rd year"
-      type: "TEACHING"
+      type: "ACADEMIC TEACHING EXPERIENCE"
       description: "SCE - Shamoon College of Engineering"
       date: "2025-01-01"
 
     - title: "Module Leader - BIM"
-      type: "TEACHING"
+      type: "ACADEMIC TEACHING EXPERIENCE"
       description: "SCE - Shamoon College of Engineering"
       date: "2025-01-01"
 
     - title: "Mentor - Integrative Studio 3rd year"
-      type: "TEACHING"
+      type: "ACADEMIC TEACHING EXPERIENCE"
       description: "SCE - Shamoon College of Engineering"
       date: "2025-01-01"
 
     - title: "Module Leader - Parametric Design Course 3rd year"
-      type: "TEACHING"
+      type: "ACADEMIC TEACHING EXPERIENCE"
       description: "SCE - Shamoon College of Engineering"
       date: "2024-01-01"
 
     - title: "Module Co-Leader - BIM 3rd year"
-      type: "TEACHING"
+      type: "ACADEMIC TEACHING EXPERIENCE"
       description: "SCE - Shamoon College of Engineering"
       date: "2024-01-01"
 
     - title: "Mentor - Integrative Studio 3rd year"
-      type: "TEACHING"
+      type: "ACADEMIC TEACHING EXPERIENCE"
       description: "SCE - Shamoon College of Engineering"
       date: "2024-01-01"
+      
+    - title: "Mentor - Residential Studio 2nd year"
+      type: "ACADEMIC TEACHING EXPERIENCE"
+      description: "Technion - Institute of Technology"
+      date: "2017-01-01"
+      
+
 
     # PROJECTS
     - title: "Yidan Long Learning Centre & HQ | Shenzhen, China | Stages 2–5"
@@ -166,3 +174,27 @@
       description: "Uri Cohen Architects"
       date: "2015-01-01"
       link: ""
+      
+      
+    - title: "BSc (Hons) Architecture (Completed)"
+      type: "EDUCATION"
+      description: "Technion - Institute of Technology"
+      date: "2017-01-01"
+      
+    - title: "MArch Architecture and Urbanism (Completed)"
+      type: "EDUCATION"
+      description: "Technion - Institute of Technology"
+      date: "2019-01-01"
+      
+    - title: "B.Arch, Exchange Program (Completed)"
+      type: "EDUCATION"
+      description: "TUM - Technical University of Munich"
+      date: "2016-01-01"
+
+    
+    - title: "Healthier Materials and Sustainable Building Certificat. (Completed)      "
+      type: "EDUCATION"
+      description: "Completed at Parsons School of Design, New York."
+      date: 2021-07-15
+      link: ""
+

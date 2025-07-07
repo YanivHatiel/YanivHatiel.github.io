@@ -1,0 +1,96 @@
+{{ define "main" }}
+
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- if .Description }}
+  <div class="post-description">
+    {{ .Description }}
+  </div>
+  {{- end }}
+</header>
+
+{{ if site.Data.research.items }}
+<section class="research-list">
+  {{ range site.Data.research.items }}
+    <div class="research-item">
+      <img src="{{ .thumb }}" alt="{{ .title }}" class="research-image">
+      <div class="research-content">
+        <h3 class="research-title">{{ .title }}</h3>
+        {{ with .by }}<p class="research-author">{{ . }}</p>{{ end }}
+        {{ with .summary }}<div class="research-summary">{{ . | safeHTML }}</div>{{ end }}
+
+
+      </div>
+    </div>
+  {{ end }}
+</section>
+{{ else }}
+  <p>No research items found.</p>
+{{ end }}
+
+<style>
+.research-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.research-item {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.research-image {
+  width: 320px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.research-content {
+  flex: 1;
+}
+
+.research-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+.research-author {
+  font-weight: 500;
+  margin: 0 0 0.75rem;
+  color: var(--primary, inherit);
+}
+
+.research-summary {
+  margin: 0;
+  line-height: 1.6;
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .research-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .research-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .research-content {
+    text-align: left;
+  }
+}
+</style>
+
+{{ end }}

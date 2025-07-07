@@ -1,0 +1,65 @@
+- title: Evaluating the Influence of Varied External Shading Elements on Internal
+    Daylight Illuminance
+  by: Yasha J. Grobman , Guy Austern, Yaniv Hatiel and Isaac Guedi Capeluto
+  summary: |-
+    Published in MDPI, February 2020
+  thumb: /images/research/evaluating-the-influence-of-varied-external-shading-elements-on-internal-daylight-illuminance/thumb.jpg
+  link: https://www.academia.edu/55836423/Evaluating_the_Influence_of_Varied_External_Shading_Elements_on_Internal_Daylight_Illuminances
+- title: BIM COORDINATORS SUMMIT
+  by: Yaniv Hatiel | 01Architecture©
+  summary: |-
+    Publication - Seamless BIM Integratio
+  thumb: /images/research/bim-coordinators-summit/thumb.jpg
+  link: https://issuu.com/bimcoordinatorsummit/docs/bim_coordinators_magazine_2024/22
+- title: Cricket -Grasshopper Plug-in
+  by: Yaniv Hatiel | 01Architecture©
+  summary: |-
+    Cricket is a research-based Grasshopper plug-in developed to enhance acoustic performance through a dynamic, panelized wall system. The project investigates how geometry-driven design can be used to adaptively regulate reverberation, allowing a single architectural space to accommodate diverse acoustic requirements—such as low echo for speech-based programs and higher resonance for musical performances.
+    <p>
+
+    The methodology is rooted in computational abstraction: sound waves are modeled as vectors, and echo intensity is derived from variations in their path lengths. A simulated grid represents auditory perception, with each cell expressing resonance values across the space. A generative algorithm then modifies panel geometry in response to acoustic targets, dynamically tuning surface angles to control sound reflection and dispersion. Cricket enables spatial adaptability without mechanical systems, offering a passive, geometry-driven solution for acoustic flexibility in performance and learning environments.
+  thumb: /images/research/cricket--grasshopper-plug-in/thumb.jpg
+- title: Responsive System For Crowded Cities
+  by: Yaniv Hatiel | 01Architecture©
+  summary: |-
+    This project investigates how kinetic architecture can redefine public space in dense urban environments. Developed through a modular pantograph system, the design introduces flexible structures that shift in response to changing demands—expanding or contracting to support diverse activities throughout the day. These dynamic transformations allow cities to reclaim underused land and adapt it to the evolving needs of their communities. <p>
+
+    Enabled by digital infrastructure and real-time data, the system translates urban conditions into spatial decisions. Each module balances efficiency and expression, offering a spectrum of configurations that support both social interaction and individual use. The result is a spatial framework that embraces the complexity of future cities—fluid, inclusive, and deeply responsive.
+  thumb: /images/research/responsive-system-for-crowded-cities/thumb.jpg
+- title: 2D to BIM
+  by: Yaniv Hatiel | 01Architecture©
+  summary: "Background\nThe script has been developed to support the team in the initial\
+    \ design stage. The client provided a set of 2D CAD plans and an Excel with attributes\
+    \ for 30 buildings. We aim to visualize the different data and avoid the remodelling\
+    \ process in Revit. \nThe script can generate a Revit model following KPF standards\
+    \ based on 2D plans. The Revit model includes Levels, floors, rooms, areas and\
+    \ attributes."
+  thumb: /images/research/2d-to-bim/thumb.jpg
+- title: Data-Driven Spatial Analysis for Informed Layout Design
+  by: Yaniv Hatiel | 01Architecture©
+  summary: |-
+    A computational tool was developed to analyze existing floor plans using layered spatial data. By mapping and quantifying key performance factors—such as daylight availability, visual connectivity, view quality, and proximity to amenities—the tool enables architects to make more informed design decisions during the early stages of planning.
+    <p>
+    Integrating spatial analytics with parametric evaluation, the tool visualizes how each factor influences the spatial configuration. It provides a data-driven framework that moves beyond intuition, supporting more efficient, functional, and context-responsive layouts. This approach reflects a growing shift toward evidence-based design, where spatial intelligence directly informs architectural decision-making.
+  thumb: /images/research/data-driven-spatial-analysis-for-informed-layout-design/thumb.jpg
+- title: BIM Integration for Freeform Architecture Using Computational Tools
+  by: Yaniv Hatiel | 01Architecture©
+  summary: |-
+    Integrating freeform geometry into a BIM workflow poses both technical and conceptual challenges. In this study, a lightweight circulation element was designed using parametric tools in Rhino and Grasshopper, generating a dynamic form intended to contrast with and soften a rigid brutalist context. The design introduced porosity and spatial continuity by selectively removing internal floor slabs, creating a new vertical void that invites light and movement.
+
+    To bridge conceptual modeling with construction logic, a custom Dynamo script was developed to embed the Grasshopper-generated geometry into Revit. This translation preserved parametric control while enabling coordination within a BIM environment. The research demonstrates a method for embedding complex, data-driven forms into standardized architectural workflows—merging experimental design with technical precision.
+  thumb: /images/research/bim-integration-for-freeform-architecture-using-computational-tools/thumb.jpg
+- title: Automating Parametric Façade Integration into Native BIM Workflows
+  by: Yaniv Hatiel | 01Architecture©
+  summary: |-
+    Data-driven evaluation methods were applied to guide the spatial organization of a mixed-use urban development. Environmental performance metrics—including daylight availability, solar radiation, visual connectivity, and view obstruction—were used to assess and compare design alternatives across multiple urban scenarios.
+
+    By combining solar analysis, isovist mapping, and pedestrian flow simulations, the study revealed how subtle shifts in massing and orientation impact environmental quality and spatial experience. The final scheme achieved greater daylight equity, reduced radiation exposure, and improved circulation while maintaining development density. The research demonstrates the value of integrating environmental data into early-stage urban design as a means of optimizing form through quantifiable, human-centered outcomes.
+  thumb: /images/research/automating-parametric-faade-integration-into-native-bim-workflows/thumb.jpg
+- title: Performance-Based Strategies for Sustainable Urban Development
+  by: Yaniv Hatiel | 01Architecture©
+  summary: |-
+    This project investigates how environmental data can inform the spatial logic of mixed-use urban development. Using a computational approach, multiple massing strategies were evaluated against key performance indicators—daylight availability, solar radiation, visual connectivity, and view obstruction—to guide form generation and improve spatial quality.
+
+    The methodology integrates solar access simulations, visibility mapping, and spatial connectivity analysis to quantify the environmental impact of urban morphology. Comparative studies between schemes demonstrated measurable trade-offs between density and public realm performance. The final configuration achieved improved daylight distribution and minimized solar radiation exposure, while enhancing pedestrian connectivity and preserving key view corridors. The results suggest that integrating data-driven evaluation early in the design process can lead to more responsive, sustainable, and human-centered urban environments.
+  thumb: /images/research/performance-based-strategies-for-sustainable-urban-development/thumb.jpg

@@ -1,18 +1,5 @@
 items:
 
-  - title: "BIM COORDINATORS SUMMIT"
-    type: "PUBLICATION"
-    description: "Seamless BIM Integration: Enhance 
-    Design and Documentation with Rhino."
-    date: 2024-07-15
-    link: ""
-       
-    
-  - title: "Evaluating the Influence of Varied External Shading Elements on Internal Daylight Illuminance"
-    type: "PUBLICATION"
-    description: "Published in MDPI, February 2020."
-    date: 2020-02-03
-    link: "https://www.academia.edu/55836423/Evaluating_the_Influence_of_Varied_External_Shading_Elements_on_Internal_Daylight_Illuminances"
   
   - title: "2nd Prize – Undergraduate Award for Design Excellence"
     type: "AWARD"
@@ -90,9 +77,3 @@ items:
     link: ""
 
 
-    
-  - title: "Healthier Materials and Sustainable Building Certificat.      "
-    type: "PROFESSIONAL DEVELOPMENT"
-    description: "Completed at Parsons School of Design, New York."
-    date: 2021-07-15
-    link: ""

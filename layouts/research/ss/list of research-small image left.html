@@ -75,13 +75,7 @@
     <div class="research-entry">
       <img src="{{ .thumb }}" alt="{{ .title }}" class="research-image">
       <div class="research-meta">
-        <h3>
-          {{- if and (isset . "link") (ne .link "") }}
-            <a href="{{ .link }}" target="_blank" rel="noopener">{{ .title }}</a>
-          {{- else }}
-            {{ .title }}
-          {{- end }}
-        </h3>
+        <h3>{{ .title }}</h3>
         {{ with .by }}<p class="meta-by">{{ . }}</p>{{ end }}
         {{ with .summary }}{{ . | safeHTML }}{{ end }}
       </div>
