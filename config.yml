@@ -38,6 +38,8 @@ params:
 
   
   assets:
+  
+    social_image: "images/icon/social-preview.png"
     customCSS:
       - css/custom.css       # note the space after `-`
     
