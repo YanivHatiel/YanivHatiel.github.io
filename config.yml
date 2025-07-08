@@ -62,7 +62,7 @@ params:
     ShowPageNums: true
     ShowToc: true
     # comments: false
-    images: ["images/papermod-cover.png"]
+    images: ["images/icon/social-preview.png"]
     favicon: "images/icon/favicon.ico"
     favicon16x16: "images/icon/favicon-16x16.png"
     favicon32x32: "images/icon/favicon-32x32.png"
