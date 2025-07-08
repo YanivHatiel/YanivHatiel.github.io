@@ -18,13 +18,13 @@
 <meta property="og:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:image" content="{{ "images/papermod-cover.png" | absURL }}">
+<meta property="og:image" content="{{ with site.Params.assets.social_image }}{{ . | absURL }}{{ else }}{{ "images/papermod-cover.png" | absURL }}{{ end }}">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
 <meta name="twitter:description" content="{{ with .Params.description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-<meta name="twitter:image" content="{{ "images/papermod-cover.png" | absURL }}">
+<meta name="twitter:image" content="{{ with site.Params.assets.social_image }}{{ . | absURL }}{{ else }}{{ "images/papermod-cover.png" | absURL }}{{ end }}">
 
 
 
