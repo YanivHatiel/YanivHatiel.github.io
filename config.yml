@@ -5,9 +5,7 @@ baseURL: "https://yaniv.hatiel.com/"
 # Or, if you prefer relative paths (often safer on Pages):
 relativeURLs: false
 
-
-title: Yaniv Hatiel
-description: Architectural design, parametric workflows, and innovative digital tools for architects and designers.
+title: "Yaniv Hatiel"
 
 
 
@@ -31,9 +29,10 @@ caches:
   images:
     dir: ":cacheDir/images"
 
-
+  
 params:
   author: "Yaniv Hatiel"
+  description: "Architectural design, parametric workflows, and innovative digital tools for architects and designers."
 
 
 
