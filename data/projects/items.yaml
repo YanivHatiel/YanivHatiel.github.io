@@ -5,10 +5,10 @@
     <p>
     A central promenade connects all functions, fostering movement, encounters, and a strong sense of community. The terraced buildings and fluid roofs follow the slope, blending indoor and outdoor spaces. Carefully placed openings and skylights allow natural light to shape dynamic interiors, while shading elements ensure comfort throughout the year—creating an inspiring environment for learning, gathering, and growth.
   tag: ''
-  thumb: /images/projects/Cliffside Campus/campus-educational-cliff-desert-cover-thumb.jpg
-  preview: /images/projects/Cliffside Campus/campus-educational-cliff-desert-cover-preview.jpg
+  thumb: /images/projects/cliffside-campus/campus-educational-cliff-desert-cover-thumb.jpg
+  preview: /images/projects/cliffside-campus/campus-educational-cliff-desert-cover-preview.jpg
   images:
-  - /images/projects/Cliffside Campus/campus-educational-cliff-desert-cover.png
+  - /images/projects/cliffside-campus/campus-educational-cliff-desert-cover.png
 - title: Yandex Headquarter
   by: PLP Architecture published on <a href="https://www.dezeen.com/2020/08/12/yandex-hq-moscow-plp-architecture-titanium/"
     target="_blank">Dezeen</a>
@@ -49,10 +49,10 @@
     <p>
     A transparent ETFE canopy spans between arched supports, allowing natural light to flood the rink while preserving panoramic views of the landscape. Beneath the membrane, a secondary enclosed volume is seamlessly integrated, creating an indoor rink and multifunctional public space. This dual configuration extends the usability of the facility throughout the seasons while maintaining a light architectural footprint.
   tag: ''
-  thumb: /images/projects/Ice Rink/Membran_Upscalex4_00034_edit-cover-thumb.jpg
-  preview: /images/projects/Ice Rink/Membran_Upscalex4_00034_edit-cover-preview.jpg
+  thumb: /images/projects/ice-rink/membran_upscalex4_00034_edit-cover-thumb.jpg
+  preview: /images/projects/ice-rink/membran_upscalex4_00034_edit-cover-preview.jpg
   images:
-  - /images/projects/Ice Rink/Membran_Upscalex4_00034_edit-cover.jpg
+  - /images/projects/ice-rink/membran_upscalex4_00034_edit-cover.jpg
 - title: Interactive Art Beacon
   by: Yaniv Hatiel
   description: |-
@@ -60,11 +60,11 @@
     <p>
     Digitally fabricated from CNC-cut plywood, the modular structure is stabilized with slender horizontal connectors, creating a lightweight and spiraling form. Tin railings accentuate the beacon’s movement and contrast with the warm wooden texture. An open platform for local artists, the beacon pulls content from cloud-based submissions, transforming into an evolving public gallery and urban landmark that bridges architecture, technology, and community expression.
   tag: ''
-  thumb: /images/projects/Interactive Art Beacon/Antepavilion-bridge-5-cover-thumb.jpg
-  preview: /images/projects/Interactive Art Beacon/Antepavilion-bridge-5-cover-preview.jpg
+  thumb: /images/projects/interactive-art-beacon/antepavilion-bridge-5-cover-thumb.jpg
+  preview: /images/projects/interactive-art-beacon/antepavilion-bridge-5-cover-preview.jpg
   images:
-  - /images/projects/Interactive Art Beacon/Antepavilion-bridge-5-cover.jpg
-  - /images/projects/Interactive Art Beacon/Antepavilion-bridge-cover.jpg
+  - /images/projects/interactive-art-beacon/antepavilion-bridge-5-cover.jpg
+  - /images/projects/interactive-art-beacon/antepavilion-bridge-cover.jpg
 - title: Museum of Art
   by: Yaniv Hatiel , David Bahar, more info on <a href="https://www.nytimes.com/2015/10/13/t-magazine/israel-art-museum-ein-harod.html"
     target="_blank">The New York Times</a>
@@ -86,10 +86,10 @@
     <p>
     Responding to intense western exposure, the design introduces a subtle fold in the roofline. This calibrated maneuver reduces solar heat gain by 85 percent compared to conventional solutions, allowing uninterrupted views of the valley while enhancing thermal comfort and environmental performance.
   tag: ''
-  thumb: /images/projects/Yoga Retreat/Yoga-cover-thumb.jpg
-  preview: /images/projects/Yoga Retreat/Yoga-cover-preview.jpg
+  thumb: /images/projects/yoga-retreat/yoga-cover-thumb.jpg
+  preview: /images/projects/yoga-retreat/yoga-cover-preview.jpg
   images:
-  - /images/projects/Yoga Retreat/Yoga-cover.jpg
+  - /images/projects/yoga-retreat/yoga-cover.jpg
 - title: U-House Complex
   by: Yaniv Hatiel | 01Architecture©
   description: |-
@@ -98,10 +98,10 @@
     The massing follows the building setbacks to define private courtyards between units. These garden spaces enhance natural light, ventilation, and outdoor living—well-suited to the Mediterranean climate. Each unit enjoys a separate entrance and direct access to outdoor space, reinforcing independence and privacy.
     The building’s façade blurs the boundaries between units, creating a cohesive visual identity that fosters a sense of belonging. This unified expression supports a new model of compact, community-oriented living without compromising individual comfort or character.
   tag: ''
-  thumb: /images/projects/U-House Complex/house-residential-efficient-design-cover-thumb.jpg
-  preview: /images/projects/U-House Complex/house-residential-efficient-design-cover-preview.jpg
+  thumb: /images/projects/u-house-complex/house-residential-efficient-design-cover-thumb.jpg
+  preview: /images/projects/u-house-complex/house-residential-efficient-design-cover-preview.jpg
   images:
-  - /images/projects/U-House Complex/house-residential-efficient-design-cover.png
+  - /images/projects/u-house-complex/house-residential-efficient-design-cover.png
 - title: Responsive System For Crowded Cities
   by: Yaniv Hatiel | 01Architecture©, Render by Amit Sadik
   description: |-
@@ -109,10 +109,10 @@
     <p>
     Enabled by digital infrastructure and real-time data, the system translates urban conditions into spatial decisions. Each module balances efficiency and expression, offering a spectrum of configurations that support both social interaction and individual use. The result is a spatial framework that embraces the complexity of future cities—fluid, inclusive, and deeply responsive.
   tag: ''
-  thumb: /images/projects/Responsive System For Crowded Cities/150-DPI-thumb.jpg
-  preview: /images/projects/Responsive System For Crowded Cities/150-DPI-preview.jpg
+  thumb: /images/projects/responsive-system-for-crowded-cities/150-dpi-thumb.jpg
+  preview: /images/projects/responsive-system-for-crowded-cities/150-dpi-preview.jpg
   images:
-  - /images/projects/Responsive System For Crowded Cities/150-DPI.jpg
+  - /images/projects/responsive-system-for-crowded-cities/150-dpi.jpg
 - title: Formula Car Design
   by: Yaniv Hatiel | 01Architecture©, Ryan Porati
   description: |-
@@ -120,7 +120,7 @@
     <p>
     Multiple design options were tested for airflow, structural strength, and cost. The final shell was CNC fabricated from composite materials, with components optimized for minimal waste. Developed in close collaboration with mechanical and aeronautical engineers, the project demonstrates how digital tools and integrated teamwork can deliver precision-engineered results in real-world conditions.
   tag: ''
-  thumb: /images/projects/Formula Car Design/formula-car-parametric-grasshopper-design-01a-yaniv-hatiel-cover-thumb.jpg
-  preview: /images/projects/Formula Car Design/formula-car-parametric-grasshopper-design-01a-yaniv-hatiel-cover-preview.jpg
+  thumb: /images/projects/formula-car-design/formula-car-parametric-grasshopper-design-01a-yaniv-hatiel-cover-thumb.jpg
+  preview: /images/projects/formula-car-design/formula-car-parametric-grasshopper-design-01a-yaniv-hatiel-cover-preview.jpg
   images:
-  - /images/projects/Formula Car Design/formula-car-parametric-grasshopper-design-01a-yaniv-hatiel-cover.jpg
+  - /images/projects/formula-car-design/formula-car-parametric-grasshopper-design-01a-yaniv-hatiel-cover.jpg
