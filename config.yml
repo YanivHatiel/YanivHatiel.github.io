@@ -3,7 +3,7 @@
 
 baseURL: "https://yaniv.hatiel.com/"
 # Or, if you prefer relative paths (often safer on Pages):
-relativeURLs: true
+relativeURLs: false
 
 
 title: Yaniv Hatiel
