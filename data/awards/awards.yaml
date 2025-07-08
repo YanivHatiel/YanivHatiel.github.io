@@ -2,13 +2,13 @@ items:
 
   
   - title: "2nd Prize – Undergraduate Award for Design Excellence"
-    type: "AWARD"
+    type: "AWARDS"
     description: "Second prize for undergraduate award for design excellence."
     date: 2016-06-01
     link: ""
 
   - title: "1st Prize – Undergraduate Award for Design Excellence"
-    type: "AWARD"
+    type: "AWARDS"
     description: "First prize for undergraduate award for design excellence."
     date: 2016-06-01
     link: ""
@@ -41,37 +41,37 @@ items:
     
     
   - title: "2nd Prize – Educational Campus Competition"
-    type: "AWARD"
+    type: "AWARDS"
     description: "Second prize in a public competition for the planning, construction, and development of an educational campus."
     date: 2023-01-01
     link: ""
 
   - title: "1st Prize – Master’s Thesis (Nikser Prize)"
-    type: "AWARD"
+    type: "AWARDS"
     description: "First prize for final year Master’s thesis, awarded the Nikser Prize."
     date: 2018-06-01
     link: ""
 
   - title: "Finalist – Master’s Thesis (Riskin Prize)"
-    type: "AWARD"
+    type: "AWARDS"
     description: "Finalist for final year Master’s thesis, Riskin Prize."
     date: 2018-06-01
     link: ""
 
   - title: "3rd Prize – Mathematics Library Design Competition"
-    type: "AWARD"
+    type: "AWARDS"
     description: "Third prize in the Mathematics Library Design Competition."
     date: 2018-04-01
     link: ""
 
   - title: "2nd Prize – Escape Room Design Competition"
-    type: "AWARD"
+    type: "AWARDS"
     description: "Second prize in the Escape Room Design Competition."
     date: 2018-01-01
     link: ""
 
   - title: "Finalist – Design Competition for Award Trophy"
-    type: "AWARD"
+    type: "AWARDS"
     description: "Finalist in the Design Competition for Award Trophy."
     date: 2017-06-01
     link: ""
