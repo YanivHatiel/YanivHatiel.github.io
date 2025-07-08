@@ -7,7 +7,13 @@ relativeURLs: true
 
 
 title: Yaniv Hatiel
-copyright: "© [Yaniv Hatiel](https://yaniv.hatiel.com)"
+
+
+
+footer:
+  text: "© [Yaniv Hatiel](https://yaniv.hatiel.com)"
+  hideCopyright: false
+  hideThemeAttribution: true
 
 
 
@@ -27,6 +33,9 @@ caches:
 
 params:
   author: "Yaniv Hatiel"
+
+
+
   
   assets:
     customCSS:
