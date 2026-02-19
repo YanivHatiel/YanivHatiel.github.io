@@ -98,9 +98,19 @@ body.dark .header.scrolled {
     position: relative;
 }
 
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 12vh;
+        /* More space on mobile */
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
 .hero-title {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    /* Smaller min size for mobile */
     line-height: 1.1;
     margin-bottom: 2rem;
     opacity: 0;
@@ -854,14 +864,16 @@ body.dark .project-item.active {
 @media (max-width: 600px) {
     .footer-links {
         flex-direction: column;
-        gap: 2rem;
-        /* Keep spacing on mobile */
+        gap: 1rem;
     }
 
     .footer-separator {
         display: none;
+        /* Hide dots on mobile vertical list */
     }
 }
+
+
 
 /* Staggered Animation for Project Items */
 .project-item:nth-child(1) {
