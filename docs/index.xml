@@ -2,93 +2,82 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Projects on Yaniv Hatiel</title>
-    <link>https://yaniv.hatiel.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Projects on Yaniv Hatiel</description>
     <generator>Hugo -- 0.147.7</generator>
     <language>en</language>
     <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://yaniv.hatiel.com/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Install / Update PaperMod</title>
-      <link>https://yaniv.hatiel.com/posts/papermod/papermod-installation/</link>
+      <link>http://localhost:1313/posts/papermod/papermod-installation/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://yaniv.hatiel.com/posts/papermod/papermod-installation/</guid>
+      <guid>http://localhost:1313/posts/papermod/papermod-installation/</guid>
       <description>Read aboout Install and Update instructions and sampled configuration templates</description>
     </item>
     <item>
       <title>Features / Mods</title>
-      <link>https://yaniv.hatiel.com/posts/papermod/papermod-features/</link>
+      <link>http://localhost:1313/posts/papermod/papermod-features/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
-      <guid>https://yaniv.hatiel.com/posts/papermod/papermod-features/</guid>
+      <guid>http://localhost:1313/posts/papermod/papermod-features/</guid>
       <description>Learn About All Features in PaperMod</description>
     </item>
     <item>
       <title>Markdown Syntax Guide For L2</title>
-      <link>https://yaniv.hatiel.com/posts/markdown-syntax.fr/</link>
+      <link>http://localhost:1313/posts/markdown-syntax.fr/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://yaniv.hatiel.com/posts/markdown-syntax.fr/</guid>
+      <guid>http://localhost:1313/posts/markdown-syntax.fr/</guid>
       <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
     </item>
     <item>
       <title>Markdown Syntax Guide For RTL</title>
-      <link>https://yaniv.hatiel.com/posts/markdown-syntax.fa/</link>
+      <link>http://localhost:1313/posts/markdown-syntax.fa/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://yaniv.hatiel.com/posts/markdown-syntax.fa/</guid>
+      <guid>http://localhost:1313/posts/markdown-syntax.fa/</guid>
       <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
     </item>
     <item>
       <title>Markdown Syntax Guide</title>
-      <link>https://yaniv.hatiel.com/posts/markdown-syntax/</link>
+      <link>http://localhost:1313/posts/markdown-syntax/</link>
       <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://yaniv.hatiel.com/posts/markdown-syntax/</guid>
+      <guid>http://localhost:1313/posts/markdown-syntax/</guid>
       <description>Sample article showcasing basic Markdown syntax and formatting for HTML elements.</description>
     </item>
     <item>
       <title>Code Syntax Guide</title>
-      <link>https://yaniv.hatiel.com/posts/code_syntax/</link>
+      <link>http://localhost:1313/posts/code_syntax/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://yaniv.hatiel.com/posts/code_syntax/</guid>
+      <guid>http://localhost:1313/posts/code_syntax/</guid>
       <description>Sample article showcasing basic code syntax and formatting for HTML elements.</description>
     </item>
     <item>
       <title>Rich Content and Shortcodes</title>
-      <link>https://yaniv.hatiel.com/posts/rich-content/</link>
+      <link>http://localhost:1313/posts/rich-content/</link>
       <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://yaniv.hatiel.com/posts/rich-content/</guid>
+      <guid>http://localhost:1313/posts/rich-content/</guid>
       <description>A brief description of Hugo Shortcodes</description>
     </item>
     <item>
       <title>Math Typesetting</title>
-      <link>https://yaniv.hatiel.com/posts/math-typesetting/</link>
+      <link>http://localhost:1313/posts/math-typesetting/</link>
       <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://yaniv.hatiel.com/posts/math-typesetting/</guid>
+      <guid>http://localhost:1313/posts/math-typesetting/</guid>
       <description>A brief guide to setup KaTeX</description>
     </item>
     <item>
       <title>Emoji Support</title>
-      <link>https://yaniv.hatiel.com/posts/emoji-support/</link>
+      <link>http://localhost:1313/posts/emoji-support/</link>
       <pubDate>Tue, 05 Mar 2019 00:00:00 +0000</pubDate>
-      <guid>https://yaniv.hatiel.com/posts/emoji-support/</guid>
+      <guid>http://localhost:1313/posts/emoji-support/</guid>
       <description>Guide to emoji usage in Hugo</description>
     </item>
     <item>
-      <title>About</title>
-      <link>https://yaniv.hatiel.com/about/</link>
+      <title>Yaniv Hatiel | M.Arch</title>
+      <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://yaniv.hatiel.com/about/</guid>
-      <description>&lt;h2 id=&#34;yaniv-hatiel--march&#34;&gt;Yaniv Hatiel | M.Arch&lt;/h2&gt;
-&lt;p&gt;Yaniv Hatiel is the founder of
-&lt;a href=&#34;https://01architecture.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;01Architecture&lt;/strong&gt;&lt;/a&gt;
-, a design and research studio focused on integrating computational tools, sustainability, and performance-driven strategies into architectural workflows.
-&lt;br&gt;&lt;br&gt;
-In parallel with his role as an adjunct lecturer at SCE, where he contributes to courses in Bioclimatic Design, Parametric Design, BIM, and Integrative Studio, Yaniv launched
-&lt;a href=&#34;https://archidemy.01architecture.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Archidemy&lt;/strong&gt;&lt;/a&gt; —
-a digital platform that provides hands-on tutorials, simulation tools, and automation workflows for architecture students and professionals.
-He teaches architecture students at SCE, where he develops and teaches courses in Bioclimatic Design, Parametric Design, BIM and Integrative Studio, combining theory and practice to prepare students for real-world challenges in contemporary architecture.
-&lt;br&gt;&lt;br&gt;
-Previously, Yaniv made significant contributions to global large-scale projects, leveraging innovative design and advanced technical strategies to enhance architectural solutions. As a Senior Designer at &lt;strong&gt;Zaha Hadid Architects&lt;/strong&gt;, he was pivotal in the façade design and rationalization for the Yidan Foundation’s high-rise learning center.
-At &lt;strong&gt;Kohn Pedersen Fox&lt;/strong&gt;, he led the Oriente Green Campus project as a Project BIM Specialist.
-During his tenure at &lt;strong&gt;PLP Architecture&lt;/strong&gt;, Yaniv developed data-driven strategies for the Yandex Headquarters and a confidential master plan in Saudi Arabia.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Yaniv Hatiel&lt;/strong&gt; is a computational architect, designer, and educator, and the founder of &lt;a href=&#34;https://01architecture.com&#34; target=&#34;_blank&#34;&gt;&lt;strong&gt;01Architecture&lt;/strong&gt;&lt;/a&gt;, a London-based design and research studio working at the intersection of architectural design, computation, and performance-driven delivery.&lt;/p&gt;
+&lt;p&gt;With international practice experience at &lt;strong&gt;Zaha Hadid Architects&lt;/strong&gt;, &lt;strong&gt;ODA&lt;/strong&gt;, &lt;strong&gt;Kohn Pedersen Fox&lt;/strong&gt;, and &lt;strong&gt;PLP Architecture&lt;/strong&gt;, Yaniv has contributed to large-scale and complex projects, leading façade design, geometric rationalisation, and BIM-led coordination. His work focuses on translating ambitious design intent into buildable, high-performance architectural systems through advanced computational workflows.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

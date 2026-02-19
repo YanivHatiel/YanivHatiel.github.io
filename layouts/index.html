@@ -1,0 +1,131 @@
+{{ define "main" }}
+<div class="main-container">
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1 class="hero-title">Yaniv Hatiel</h1>
+    <div class="hero-subtitle">
+      Founder of 01Architecture | Lecturer at SCE<br>
+      Ex-ZHA, KPF, PLP
+    </div>
+    <div class="hero-bio">
+      Specializing in computational design and performance-driven delivery for complex architectural systems.
+    </div>
+    <div class="hero-cta">
+      <a href="https://www.01architecture.com/architecture" target="_blank" class="btn-primary">View Selected Works</a>
+      <a href="/about" class="btn-secondary">Biography</a>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  {{ if .Site.Data.portfolio }}
+  <section id="portfolio" class="portfolio-section">
+    <div class="portfolio-grid">
+      {{ range $index, $item := .Site.Data.portfolio.items }}
+      <div class="portfolio-item-wrapper">
+        <div class="portfolio-item" data-preview="{{ $index }}">
+          <div class="portfolio-thumb">
+            <img src="{{ $item.thumb }}" alt="{{ $item.title }}" loading="lazy">
+          </div>
+          <div class="portfolio-info">
+            <h3 class="portfolio-title">{{ $item.title }}</h3>
+            <span class="portfolio-category">{{ $item.by }}</span>
+          </div>
+        </div>
+
+        <!-- Preview Area (Hidden by default) -->
+        <div class="preview" data-preview="{{ $index }}">
+          <button class="close-preview" aria-label="Close preview">&times;</button>
+
+          <div class="gallery" data-index="{{ $index }}">
+            {{ range $i, $img := $item.images }}
+            <img src="{{ $img }}" alt="{{ $item.alt }}" class="gallery-image{{ if ne $i 0 }} hidden{{ end }}">
+            {{ end }}
+            <div class="gallery-controls">
+              <button class="prev">&larr;</button>
+              <button class="next">&rarr;</button>
+            </div>
+          </div>
+
+          <div class="meta">
+            <div class="meta-left">
+              <h3>{{ $item.title }}</h3>
+              <p class="meta-by">By {{ $item.by }}</p>
+              <p class="meta-author"> {{ $item.description }}</p>
+            </div>
+            {{ if $item.link }}
+            <div class="meta-link">
+              <a href="{{ $item.link }}" target="_blank">Visit Website</a>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const thumbs = document.querySelectorAll(".portfolio-item");
+
+    thumbs.forEach((thumb) => {
+      thumb.addEventListener("click", () => {
+        const target = thumb.dataset.preview;
+
+        // Toggle the specific preview
+        const previewElement = document.querySelector(`.preview[data-preview="${target}"]`);
+
+        // Close others if needed, or just toggle this one
+        document.querySelectorAll(".preview").forEach((preview) => {
+          if (preview !== previewElement) preview.classList.remove("open");
+        });
+
+        if (previewElement) {
+          previewElement.classList.toggle("open");
+          if (previewElement.classList.contains("open")) {
+            setTimeout(() => {
+              previewElement.scrollIntoView({ behavior: "smooth", block: "center" });
+            }, 300);
+          }
+        }
+      });
+    });
+
+    document.querySelectorAll(".close-preview").forEach(button => {
+      button.addEventListener("click", () => {
+        button.closest(".preview").classList.remove("open");
+      });
+    });
+
+    // Gallery Logic
+    document.querySelectorAll(".gallery").forEach((gallery) => {
+      const images = gallery.querySelectorAll(".gallery-image");
+      let current = 0;
+
+      const show = (index) => {
+        images.forEach((img, i) => {
+          img.classList.toggle("hidden", i !== index);
+        });
+      };
+
+      gallery.querySelector(".prev").addEventListener("click", (e) => {
+        e.stopPropagation();
+        current = (current - 1 + images.length) % images.length;
+        show(current);
+      });
+
+      gallery.querySelector(".next").addEventListener("click", (e) => {
+        e.stopPropagation();
+        current = (current + 1) % images.length;
+        show(current);
+      });
+
+      show(current);
+    });
+  });
+</script>
+{{ end }}

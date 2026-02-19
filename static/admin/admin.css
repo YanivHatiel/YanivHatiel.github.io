@@ -1,0 +1,141 @@
+/* Import Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+/* Global Variables Override */
+:root {
+    --font-family: 'Inter', sans-serif;
+    --bg-color: #0a0a0a;
+    --bg-secondary: #111111;
+    --text-color: #e5e5e5;
+    --text-muted: #888888;
+    --border-color: #333333;
+    --accent-color: #ffffff;
+    --active-color: #222222;
+}
+
+/* Force Dark Mode Backgrounds */
+body,
+html,
+#nc-root {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    font-family: var(--font-family) !important;
+}
+
+/* --- UI Overrides --- */
+
+/* Sidebar */
+[class*="SidebarContainer"] {
+    background-color: var(--bg-secondary) !important;
+    border-right: 1px solid var(--border-color) !important;
+}
+
+[class*="SidebarBrand"] {
+    color: var(--accent-color) !important;
+    background-color: var(--bg-secondary) !important;
+}
+
+[class*="SidebarNavLink"] {
+    color: var(--text-muted) !important;
+}
+
+[class*="SidebarNavLink"].active,
+[class*="SidebarNavLink"]:hover {
+    color: var(--text-color) !important;
+    background-color: var(--active-color) !important;
+    border-left-color: var(--accent-color) !important;
+}
+
+/* Header / Top Bar */
+[class*="AppHeader"] {
+    background-color: var(--bg-color) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+/* Collection List */
+[class*="CollectionTop"] {
+    background-color: var(--bg-color) !important;
+}
+
+[class*="Card"] {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-color) !important;
+    box-shadow: none !important;
+    transition: border-color 0.2s ease;
+}
+
+[class*="Card"]:hover {
+    border-color: var(--text-muted) !important;
+}
+
+[class*="CardList"] a {
+    color: var(--text-color) !important;
+}
+
+/* Inputs & Forms */
+input[type="text"],
+textarea,
+select,
+[class*="Widget"] {
+    background-color: var(--bg-secondary) !important;
+    border: 1px solid var(--border-color) !important;
+    color: var(--text-color) !important;
+    border-radius: 4px !important;
+    padding: 10px 12px !important;
+    box-shadow: none !important;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--text-muted) !important;
+    outline: none !important;
+}
+
+/* Buttons */
+button,
+[class*="Button"] {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-color) !important;
+    border: 1px solid var(--border-color) !important;
+    border-radius: 4px !important;
+    text-transform: uppercase;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.05em;
+    font-weight: 500 !important;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+button:hover,
+[class*="Button"]:hover {
+    background-color: var(--accent-color) !important;
+    color: var(--bg-color) !important;
+}
+
+/* Primary Button (Green one usually) */
+[class*="Button"][class*="models-Primary"] {
+    background-color: var(--bg-secondary) !important;
+    border-color: var(--text-color) !important;
+}
+
+/* Labels */
+label {
+    color: var(--text-muted) !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.05em;
+}
+
+/* Fix Editor Preview Pane Background */
+[class*="PreviewPane"] {
+    background-color: var(--bg-color) !important;
+    border-left: 1px solid var(--border-color) !important;
+}
+
+iframe {
+    background-color: #ffffff;
+    /* Preview content usually expects white */
+}

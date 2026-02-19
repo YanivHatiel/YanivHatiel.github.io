@@ -32,6 +32,34 @@ caches:
   
 params:
   author: "Yaniv Hatiel"
+
+  profileMode:
+    enabled: false
+    title: Yaniv Hatiel | M.Arch
+    subtitle: "Founder of 01Architecture | Lecturer at SCE | Ex-ZHA, KPF, PLP"
+    imageUrl: "images/icon/social-preview.png"
+    imageTitle: Yaniv Hatiel
+    imageWidth: 120
+    imageHeight: 120
+    buttons:
+      - name: 01Architecture
+        url: https://01architecture.com
+      - name: Research
+        url: https://01architecture.com/lab
+
+  homeInfoParams:
+    Title: "Yaniv Hatiel"
+    Content: >
+        I am the founder of [01Architecture](https://01architecture.com), a design and research studio focused on integrating computational tools, sustainability, and performance-driven strategies into architectural workflows.
+
+        
+        Previously, I worked as a Senior Designer at Zaha Hadid Architects, Project BIM Specialist at KPF, and Computational Designer at PLP Architecture.
+
+  socialIcons:
+    - name: Linkedin
+      url: "https://www.linkedin.com/in/yanivhatiel/"
+    - name: Email
+      url: "mailto:yanivh@01architecture.com"
   description: "Architectural design, parametric workflows, and innovative digital tools for architects and designers."
 
 
@@ -41,7 +69,8 @@ params:
   
     social_image: "images/icon/social-preview.png"
     customCSS:
-      - css/custom.css       # note the space after `-`
+      - css/custom.css
+      - css/extended/high-end.css
     
     fingerprint: false
     disableHLJS: true
@@ -50,8 +79,8 @@ params:
     ShowReadingTime: true
     ShowCodeCopyButtons: true
 
-    defaultTheme: auto
-    # disableThemeToggle: true
+    defaultTheme: dark
+    disableThemeToggle: true
     ShowShareButtons: true
     ShowReadingTime: true
     # disableSpecial1stPost: true
@@ -100,68 +129,29 @@ languages:
       series: series
     menu:
       main:
-        - name: Projects
-          url: projects
+        - name: 01Architecture
+          url: https://01architecture.com
           weight: 1
-
-        - name: Experience
-          url: experience
-          weight: 2
+          params:
+            target: "_blank"
 
         - name: Research
-          url: research
-          weight: 3
-
-        - name: Awards
-          url: awards
-          weight: 4
-
+          url: https://01architecture.com/lab
+          weight: 2
+          params:
+            target: "_blank"
 
         - name: About
           url: about
-          weight: 6
-
-
-
+          weight: 4
+          params:
+            target: "_blank"
         
 outputs:
   home:
     - HTML
     - RSS
     - JSON
-
-
-
-  profileMode:
-    enabled: false
-    title: PaperMod
-    imageUrl: "#"
-    imageTitle: my image
-    # imageWidth: 120
-    # imageHeight: 120
-    buttons:
-      - name: Archives
-        url: archives
-      - name: Tags
-        url: tags
-
-  homeInfoParams:
-
-
-
-  # socialIcons:
-  #   - name: Linkedin
-  #     title: Linkedin
-  #    url: "https://www.linkedin.com/in/yanivhatiel/"
-
-
-
-
-  # label:
-  # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
-  # text: "Home"
-  # icon: icon.png
-  # iconHeight: 35
 
   # analytics:
   #     google:

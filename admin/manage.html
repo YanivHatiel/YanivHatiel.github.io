@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Manager | 01Architecture</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --bg-secondary: #111111;
+            --bg-hover: #1a1a1a;
+            --text-color: #f0f0f0;
+            --text-muted: #666666;
+            --border-color: #222222;
+            --accent-color: #ffffff;
+            --success-color: #4caf50;
+            --font-family: 'Inter', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            color-scheme: dark;
+            /* Forces browser controls (scrollbars, dropdowns) to dark mode */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-family);
+            margin: 0;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: 300;
+            /* Lighter font weight for elegance */
+        }
+
+        h1 {
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 3rem;
+            color: var(--text-color);
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 2rem;
+            gap: 1rem;
+            position: sticky;
+            top: 1rem;
+            z-index: 100;
+        }
+
+        button {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-color);
+            border: 1px solid transparent;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0;
+            /* Sharp corners for modern feel */
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        button:hover {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+        }
+
+        button.primary {
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            font-weight: 500;
+        }
+
+        button.primary:hover {
+            background-color: #ffffff;
+            opacity: 0.9;
+        }
+
+        #project-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            /* Minimal gap */
+            border-top: 1px solid var(--border-color);
+        }
+
+        .project-card {
+            background-color: transparent;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            display: grid;
+            /* Drag | Name | Office | Location | Type | Area | Status | Year | Visible | Delete */
+            grid-template-columns: 30px 2fr 1fr 1fr 1fr 0.6fr 1.2fr 0.6fr 0.6fr 30px;
+            gap: 1rem;
+            align-items: center;
+            transition: background-color 0.2s;
+        }
+
+        .project-card:hover {
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .project-card.dragging {
+            opacity: 0.4;
+            background: var(--bg-secondary);
+        }
+
+        .drag-handle {
+            cursor: grab;
+            color: var(--border-color);
+            display: flex;
+            justify-content: center;
+            align-self: center;
+            font-size: 1.2rem;
+            transition: color 0.2s;
+        }
+
+        .project-card:hover .drag-handle {
+            color: var(--text-muted);
+        }
+
+        .field-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        label {
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0.7;
+        }
+
+        input,
+        select {
+            background: transparent;
+            border: none;
+            color: var(--text-color);
+            font-family: inherit;
+            font-size: 0.95rem;
+            width: 100%;
+            padding: 6px 0;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        /* Force options to be dark in all browsers */
+        select option {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border-bottom: 1px solid var(--text-muted);
+        }
+
+        .btn-delete {
+            color: var(--border-color);
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            padding: 0;
+            line-height: 1;
+        }
+
+        .project-card:hover .btn-delete {
+            color: var(--text-muted);
+        }
+
+        .btn-delete:hover {
+            color: #ff4444 !important;
+            background: none !important;
+            transform: scale(1.1);
+        }
+
+        /* Status Colors */
+        .status-built {
+            color: var(--success-color);
+        }
+
+        .status-concept {
+            color: var(--text-muted);
+        }
+
+        .btn-toggle-visible {
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--success-color);
+            padding: 4px 8px;
+            font-size: 0.7rem;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn-toggle-visible.hidden {
+            color: var(--text-muted);
+            border-color: var(--border-color);
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .btn-toggle-visible:hover {
+            border-color: var(--text-muted);
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--text-color);
+            color: var(--bg-color);
+            padding: 1rem 2rem;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            transform: translateY(10px);
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Experience Manager</h1>
+
+    <div class="container">
+        <div class="actions">
+            <button onclick="addNewProject()">+ Add Project</button>
+            <button class="primary" onclick="saveChanges()">Save Changes</button>
+        </div>
+
+        <div id="project-list">
+            <!-- Projects injected here -->
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Changes Saved!</div>
+
+    <script>
+        let projects = [];
+        const API_URL = 'http://localhost:3000/api/projects';
+
+        async function fetchProjects() {
+            try {
+                console.log("Fetching projects from API...");
+                const res = await fetch(API_URL);
+                console.log("Response status:", res.status);
+                projects = await res.json();
+                console.log("Projects data received:", projects);
+                if (!projects || projects.length === 0) {
+                    alert("Warning: No projects received from server. Check server console.");
+                }
+                renderProjects();
+            } catch (e) {
+                console.error("Fetch Error:", e);
+                alert("Error fetching projects: " + e.message);
+            }
+        }
+
+        function renderProjects() {
+            const list = document.getElementById('project-list');
+            list.innerHTML = '';
+
+            if (projects.length === 0) {
+                list.innerHTML = '<div style="padding: 2rem; text-align: center; color: var(--text-muted);">No projects found.</div>';
+                return;
+            }
+
+            projects.forEach((proj, index) => {
+                const card = document.createElement('div');
+                card.className = 'project-card';
+                card.draggable = true;
+                card.dataset.index = index;
+
+                // Drag Events
+                card.addEventListener('dragstart', handleDragStart);
+                card.addEventListener('dragover', handleDragOver);
+                card.addEventListener('drop', handleDrop);
+                card.addEventListener('dragenter', handleDragEnter);
+                card.addEventListener('dragleave', handleDragLeave);
+
+                card.innerHTML = `
+                    <div class="drag-handle">☰</div>
+                    
+                    <div class="field-group">
+                        <label>Name</label>
+                        <input type="text" value="${proj.name || ''}" onchange="updateProject(${index}, 'name', this.value)">
+                    </div>
+
+                    <div class="field-group">
+                        <label>Office</label>
+                        <input type="text" value="${proj.office || ''}" onchange="updateProject(${index}, 'office', this.value)">
+                    </div>
+
+                    <div class="field-group">
+                        <label>Location</label>
+                        <input type="text" value="${proj.location || ''}" onchange="updateProject(${index}, 'location', this.value)">
+                    </div>
+
+                    <div class="field-group">
+                        <label>Type</label>
+                        <input type="text" value="${proj.type || ''}" onchange="updateProject(${index}, 'type', this.value)">
+                    </div>
+
+                    <div class="field-group">
+                        <label>Area</label>
+                        <input type="text" value="${proj.area || ''}" onchange="updateProject(${index}, 'area', this.value)">
+                    </div>
+
+                    <div class="field-group">
+                        <label>Status</label>
+                        <select onchange="updateProject(${index}, 'status', this.value)" style="color: ${getStatusColor(proj.status)}">
+                            <option value="">Select...</option>
+                            <option value="Built" ${proj.status === 'Built' ? 'selected' : ''}>Built</option>
+                            <option value="Under Construction" ${proj.status === 'Under Construction' ? 'selected' : ''}>Under Construction</option>
+                            <option value="Design Development" ${proj.status === 'Design Development' ? 'selected' : ''}>Design Development</option>
+                            <option value="Competition" ${proj.status === 'Competition' ? 'selected' : ''}>Competition</option>
+                            <option value="Masterplan" ${proj.status === 'Masterplan' ? 'selected' : ''}>Masterplan</option>
+                            <option value="Concept" ${proj.status === 'Concept' ? 'selected' : ''}>Concept</option>
+                        </select>
+                    </div>
+
+                    <div class="field-group">
+                        <label>Year</label>
+                        <input type="text" value="${proj.year || ''}" onchange="updateProject(${index}, 'year', this.value)">
+                    </div>
+
+                    <div class="field-group" style="align-items: center;">
+                        <label>Visible</label>
+                        <button class="btn-toggle-visible ${proj.hidden ? 'hidden' : ''}" onclick="toggleVisibility(${index})" title="Toggle Visibility">
+                            ${proj.hidden ? 'Hidden' : 'Visible'}
+                        </button>
+                    </div>
+
+                    <button class="btn-delete" onclick="deleteProject(${index})" title="Remove">×</button>
+                `;
+
+                if (proj.hidden) {
+                    card.style.opacity = '0.5';
+                }
+
+                list.appendChild(card);
+            });
+        }
+
+        function toggleVisibility(index) {
+            projects[index].hidden = !projects[index].hidden;
+            renderProjects();
+        }
+
+        function getStatusColor(status) {
+            if (status === 'Built') return 'var(--success-color)';
+            if (status === 'Concept') return 'var(--text-muted)';
+            return 'var(--text-color)';
+        }
+
+        function updateProject(index, field, value) {
+            projects[index][field] = value;
+        }
+
+        function addNewProject() {
+            projects.unshift({
+                name: "New Project",
+                office: "Office Name",
+                year: new Date().getFullYear().toString(),
+                status: "Concept",
+                location: "Location",
+                type: "Type",
+                area: "-"
+            });
+            renderProjects();
+        }
+
+        function deleteProject(index) {
+            if (confirm('Are you sure you want to remove this project?')) {
+                projects.splice(index, 1);
+                renderProjects();
+            }
+        }
+
+        async function saveChanges() {
+            try {
+                const res = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(projects)
+                });
+
+                if (res.ok) {
+                    showToast();
+                } else {
+                    alert('Failed to save!');
+                }
+            } catch (e) {
+                alert('Error saving: ' + e);
+            }
+        }
+
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 3000);
+        }
+
+        /* Drag and Drop Logic */
+        let draggedIndex = null;
+
+        function handleDragStart(e) {
+            draggedIndex = +this.dataset.index;
+            this.classList.add('dragging');
+            e.dataTransfer.effectAllowed = 'move';
+        }
+
+        function handleDragOver(e) {
+            if (e.preventDefault) e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            return false;
+        }
+
+        function handleDragEnter(e) {
+            this.classList.add('over');
+        }
+
+        function handleDragLeave(e) {
+            this.classList.remove('over');
+        }
+
+        function handleDrop(e) {
+            if (e.stopPropagation) e.stopPropagation();
+            const targetIndex = +this.dataset.index;
+
+            if (draggedIndex !== null && draggedIndex !== targetIndex) {
+                const item = projects[draggedIndex];
+                projects.splice(draggedIndex, 1);
+                projects.splice(targetIndex, 0, item);
+                renderProjects();
+            }
+            return false;
+        }
+
+        // Init
+        fetchProjects();
+
+    </script>
+</body>
+
+</html>

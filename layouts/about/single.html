@@ -1,14 +1,135 @@
-
 {{ define "main" }}
-<section class="about-page">
-  <div class="about-grid-container">
-    <div class="about-image">
-      <img src="/images/about/Yaniv-Hatiel-architect-design-bw-l.jpg" alt="Portrait of Yaniv Hatiel" />
+<div class="about-section">
+  <!-- Left Column: Sticky Image -->
+  <div class="about-sticky">
+    <img class="about-portrait" src="/images/about/yaniv-hatiel-design-portrait-01architecture-architect.jpeg"
+      alt="Yaniv Hatiel">
+
+    <div class="about-social-icons">
+      <a href="https://www.linkedin.com/in/yanivhatiel/" target="_blank" aria-label="LinkedIn">
+        {{ partial "svg.html" (dict "name" "linkedin") }}
+      </a>
+      <a href="mailto:yanivh@01architecture.com" aria-label="Email">
+        {{ partial "svg.html" (dict "name" "email") }}
+      </a>
     </div>
-    <div class="about-text">
+
+    <div class="about-cta">
+      <a href="https://calendar.app.google/DQp9Q8XtLkRm5txz8" target="_blank">Schedule a Call</a>
+    </div>
+  </div>
+
+  <!-- Right Column: Biography -->
+  <div class="about-content">
+    <div class="about-header">
+      <h1 class="about-name">{{ .Title }}</h1>
+      <h2 class="about-role">{{ .Params.subtitle }}</h2>
+    </div>
+
+    <div class="about-bio">
       {{ .Content }}
+    </div>
+  </div>
+</div>
+
+<!-- Full Width Project List -->
+{{ if .Params.projects }}
+<section class="project-list-section">
+  <div class="project-list-container">
+    <div class="project-header-row">
+      <h3 class="section-title">Experience Record</h3>
+
+
+    </div>
+
+    <div class="project-list-grid text-sm">
+      <div class="project-row grid-header">
+        <span class="p-name">Project</span>
+        <span class="p-meta">Location</span>
+        <span class="p-meta">Type</span>
+        <span class="p-meta">Area</span>
+        <span class="p-toggle"></span>
+      </div>
+      <!-- Respect Manual Sort Order -->
+      {{ range .Params.projects }}
+      {{ if not .hidden }}
+      <div class="project-item">
+        <div class="project-row" data-type="{{ .type }}">
+          <span class="p-name">{{ .name }}</span>
+          <span class="p-meta">{{ .location }}</span>
+          <span class="p-meta">{{ .type }}</span>
+          <span class="p-meta">{{ .area }}</span>
+          <span class="p-toggle">+</span>
+        </div>
+        <div class="project-details">
+          <div class="project-details-grid">
+            <div class="detail-content">
+              {{ if .status }}
+              <span class="detail-value">{{ .status }}</span>
+              <span class="detail-separator">&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+              {{ end }}
+              <span class="detail-value">{{ .office }}</span>
+              <span class="detail-separator">&nbsp;&nbsp;•&nbsp;&nbsp;</span>
+              <span class="detail-value">{{ .year }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+      {{ end }}
     </div>
   </div>
 </section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const projectItems = document.querySelectorAll('.project-item');
+
+    projectItems.forEach(item => {
+      const row = item.querySelector('.project-row');
+      const toggle = item.querySelector('.p-toggle');
+
+      row.addEventListener('click', function () {
+        const isActive = item.classList.contains('active');
+
+        // Close all other items
+        projectItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            otherItem.classList.remove('active');
+            const otherRow = otherItem.querySelector('.project-row');
+            const otherDetails = otherItem.querySelector('.project-details');
+            const otherToggle = otherItem.querySelector('.p-toggle');
+
+            otherDetails.style.maxHeight = "0";
+            otherDetails.style.opacity = "0";
+            otherDetails.style.marginTop = "0";
+            otherToggle.textContent = "+";
+          }
+        });
+
+        // Toggle current item
+        if (!isActive) {
+          item.classList.add('active');
+          const details = item.querySelector('.project-details');
+          details.style.maxHeight = details.scrollHeight + "px";
+          details.style.opacity = "1";
+          details.style.marginTop = "1rem";
+          toggle.textContent = "−";
+        } else {
+          item.classList.remove('active');
+          const details = item.querySelector('.project-details');
+          details.style.maxHeight = "0";
+          details.style.opacity = "0";
+          details.style.marginTop = "0";
+          toggle.textContent = "+";
+        }
+      });
+    });
+  });
+</script>
+</div>
+</section>
+
+
+{{ end }}
 {{ end }}
