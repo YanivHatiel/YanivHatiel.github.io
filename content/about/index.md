@@ -51,7 +51,7 @@ projects:
     type: Education
     area: 126,000 m²
     year: '2023'
-    location: Israel
+    location: Jerusalem
     office: 01Architecture
     status: Competition
   - name: Odesa Expo 2030
@@ -142,6 +142,8 @@ projects:
     office: Uri Cohen Architects
     status: Competition
 ---
+
+
 
 
 
