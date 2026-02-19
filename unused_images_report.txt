@@ -1,0 +1,37 @@
+docs\images\about\Generated Image February 11, 2026 - 6_37PM.jpeg
+docs\images\about\Yaniv-Hatiel-architect-design-bw-l.jpg
+docs\images\about\yaniv-hatiel-design-portrait-01architecture-architect-g.jpeg
+docs\images\about\yaniv-hatiel-portrait-01architecture-architect.jpeg
+docs\images\icon\android-chrome-192x192.png
+docs\images\icon\android-chrome-512x512.png
+docs\images\msg_hu_119fbf7ae37f585d.png
+docs\images\msg_hu_1efc2efa0fec8a49.png
+docs\images\msg_hu_a8beb64c7c21f1a4.png
+docs\images\msg_hu_b77e5aad919e3ac8.png
+docs\images\msg_hu_e55f347ebac2b50b.png
+docs\images\papermod-cover_hu_5d372cec5739afc6.png
+docs\images\papermod-cover_hu_60d477562c9e7700.png
+docs\images\papermod-cover_hu_7635064d3cd496e2.png
+docs\images\papermod-cover_hu_f70eec620c0c4a5f.png
+docs\images\projects\Ein Harod Museum\Museum-art-roof-daylight-design-Shmuel-Bickels-yaniv-hatiel.jpg
+docs\images\projects\ein-harod-museum\museum-art-roof-daylight-design-shmuel-bickels-yaniv-hatiel.jpg
+docs\images\projects\Interactive Art Beacon\Antepavilion-bridge-5-cover.jpg
+docs\images\projects\Interactive Art Beacon\Antepavilion-bridge-cover.jpg
+docs\images\projects\odesa-expo-2030\odesa-expo-2030-masterplan-by-zaha-hadid-architects_dezeen_2364_col_5-1704x958-yaniv-hatiel-cover.jpg
+docs\images\projects\oriente-green-campus\oriente-green-campus-leed-lisbon-yaniv-hatiel-01a-cover.png
+docs\images\projects\Responsive System For Crowded Cities\150-DPI.jpg
+docs\images\projects\yandex-headquarter\yandex-titanium-facade-office-yaniv-hatiel-design.png
+static\images\about\Yaniv-Hatiel-architect-design-bw-l.jpg
+static\images\about\yaniv-hatiel-design-portrait-01architecture-architect-g.jpeg
+static\images\icon\android-chrome-192x192.png
+static\images\icon\android-chrome-512x512.png
+static\images\projects\Ein Harod Museum\Museum-art-roof-daylight-design-Shmuel-Bickels-yaniv-hatiel.jpg
+static\images\projects\ein-harod-museum\museum-art-roof-daylight-design-shmuel-bickels-yaniv-hatiel.jpg
+static\images\projects\Interactive Art Beacon\Antepavilion-bridge-5-cover.jpg
+static\images\projects\Interactive Art Beacon\Antepavilion-bridge-cover.jpg
+static\images\projects\odesa-expo-2030\odesa-expo-2030-masterplan-by-zaha-hadid-architects_dezeen_2364_col_5-1704x958-yaniv-hatiel-cover.jpg
+static\images\projects\oriente-green-campus\oriente-green-campus-leed-lisbon-yaniv-hatiel-01a-cover.png
+static\images\projects\Responsive System For Crowded Cities\150-DPI.jpg
+static\images\projects\yandex-headquarter\yandex-titanium-facade-office-yaniv-hatiel-design.png
+themes\PaperMod\images\screenshot.png
+themes\PaperMod\images\tn.png

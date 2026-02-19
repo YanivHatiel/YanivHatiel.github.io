@@ -28,3 +28,6 @@ _testmain.go
 resources/_gen/
 node_modules/
 admin/node_modules/
+*.zip
+*.rar
+*.tar.gz
