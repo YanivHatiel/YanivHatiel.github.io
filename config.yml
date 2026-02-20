@@ -38,7 +38,7 @@ params:
   profileMode:
     enabled: false
     title: Yaniv Hatiel | Founder and Design Director of 01Architecture
-    subtitle: "Founder of 01Architecture | Educator at SCE | Ex-ZHA, KPF, PLP"
+    subtitle: "Founder of 01Architecture | Educator | Ex-ZHA, KPF, PLP"
     imageUrl: "images/icon/social-preview.png"
     imageTitle: Yaniv Hatiel
     imageWidth: 120
