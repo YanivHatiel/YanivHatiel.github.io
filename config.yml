@@ -31,6 +31,8 @@ caches:
 
   
 params:
+  label:
+    text: "Yaniv Hatiel | M.Arch"
   author: "Yaniv Hatiel"
 
   profileMode:
