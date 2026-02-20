@@ -167,7 +167,7 @@ Alongside practice, Yaniv teaches architectural design, parametric design, biocl
         <span class="loc">London</span>
       </li>
         <li>
-        <span class="role">Adjunct Lecturer</span>
+        <span class="role">Educator</span>
         <span class="org">SCE Academy</span>
       </li>
         <li>

@@ -38,7 +38,7 @@ params:
   profileMode:
     enabled: false
     title: Yaniv Hatiel | Founder and Design Director of 01Architecture
-    subtitle: "Founder of 01Architecture | Lecturer at SCE | Ex-ZHA, KPF, PLP"
+    subtitle: "Founder of 01Architecture | Educator at SCE | Ex-ZHA, KPF, PLP"
     imageUrl: "images/icon/social-preview.png"
     imageTitle: Yaniv Hatiel
     imageWidth: 120
@@ -62,7 +62,7 @@ params:
       url: "https://www.linkedin.com/in/yanivhatiel/"
     - name: Email
       url: "mailto:yanivh@01architecture.com"
-  description: "Yaniv Hatiel is the Founder and Design Director of 01Architecture, a London-based studio specializing in computational design, performance-driven architecture, and advanced geometry. Lecturer at SCE and former Senior Designer at Zaha Hadid Architects."
+  description: "Yaniv Hatiel is the Founder and Design Director of 01Architecture, a London-based studio specializing in computational design, performance-driven architecture, and advanced geometry. Educator at SCE and former Senior Designer at Zaha Hadid Architects."
   keywords: ["Yaniv Hatiel", "01Architecture", "Computational Design", "Architect", "London", "Zaha Hadid Architects", "KPF", "Parametric Design", "BIM", "Generative Design"]
 
 
