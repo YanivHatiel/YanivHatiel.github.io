@@ -90,8 +90,6 @@
   </url><url>
     <loc>http://localhost:1313/experience/</loc>
   </url><url>
-    <loc>http://localhost:1313/research/</loc>
-  </url><url>
     <loc>http://localhost:1313/archidemy/</loc>
   </url><url>
     <loc>http://localhost:1313/architool/</loc>
@@ -101,6 +99,8 @@
     <loc>http://localhost:1313/archives/</loc>
   </url><url>
     <loc>http://localhost:1313/projects/</loc>
+  </url><url>
+    <loc>http://localhost:1313/research/</loc>
   </url><url>
     <loc>http://localhost:1313/search/</loc>
   </url><url>

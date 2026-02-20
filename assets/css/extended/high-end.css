@@ -83,6 +83,24 @@ body.dark .header.scrolled {
     letter-spacing: 0.05em;
 }
 
+/* Theme Toggle Icon Control */
+.theme-switch-item {
+    display: flex;
+    align-items: center;
+}
+
+.theme-icon-contrast {
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+body.dark .theme-icon-contrast {
+    transform: rotate(180deg);
+}
+
+.theme-icon-contrast:hover {
+    opacity: 0.7;
+}
+
 /* Hamburger Menu Styles */
 .menu-toggle {
     display: none;
@@ -989,8 +1007,8 @@ body.dark .project-item.active {
 
 @media (max-width: 600px) {
     .footer-links {
-        flex-direction: column;
-        gap: 1rem;
+        flex-direction: row;
+        gap: 1.5rem;
     }
 
     .footer-separator {
