@@ -1,3 +1,10 @@
 User-agent: *
-Disallow: /
-Sitemap: http://localhost:1313/sitemap.xml
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://yaniv.hatiel.com/sitemap.xml
